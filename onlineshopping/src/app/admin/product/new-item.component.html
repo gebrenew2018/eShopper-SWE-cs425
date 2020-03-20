@@ -1,0 +1,72 @@
+<div class="container" style="padding-top: 30px;" align="center">
+  <mat-card style="width: 60%; text-align: justify" >
+    <form [formGroup]="itemForm" #saveproduct (ngSubmit)="onSubmit(saveproduct)" style="padding-left: 20px;">
+      <fieldset>
+        <legend>Add New Item</legend>
+        <div class="container" style="margin-top: 1em;">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label>* Item Name</label>
+                <input id="itemName" formControlName="itemName" type="text" class="form-control" placeholder="Enter Item name"
+                       required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="price">* Price</label>
+                <input id="price" formControlName="price" type="text" class="form-control" placeholder="Enter Price" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="category">*Category</label>
+                <select formControlName="category" id="category" class="form-control" required>
+                  <option value="">Select category</option>
+                  <option value="Cloth">Cloth</option>
+                  <option value="Shoe">Shoe</option>
+                  <option value="Book">Book</option>
+                  <option value="Electronics">Electronics</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="collection">*Collection</label>
+                <select formControlName="collection" id="collection" class="form-control" required>
+                  <option value="">Select Collection</option>
+                  <option value="allbrands">All</option>
+                  <option value="mens">Mens</option>
+                  <option value="womens">Womens</option>
+                  <option value="boys">Boys</option>
+                  <option value="girls">Girls</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="image">* Image</label>
+                <input id="image" formControlName="itemImage" (change)="selectFile($event)"
+                       placeholder="browse and image of small size" type="file" class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <button  type="submit" mat-stroked-button color="primary">Add</button> &nbsp;&nbsp;&nbsp;
+              <button (click)="displayList()" type="button" mat-stroked-button color="warn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </mat-card>
+</div>

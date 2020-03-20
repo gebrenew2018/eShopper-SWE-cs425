@@ -1,0 +1,22 @@
+<mat-card class="mat-elevation-z0">
+  <mat-card >
+    <mat-card-header class="custom-mat-card-header" fxLayout="row">
+      <div fxFlex="10">
+        <mat-card-title>Customer Registration</mat-card-title>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <form  [formGroup]="customerForm" n (ngSubmit)="onSubmit()" fxLayout="column" autocomplete="off">
+          <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required/>
+          </mat-form-field>
+        <mat-card-actions fxLayoutAlign="end end">
+          <button type="submit" mat-raised-button color="primary"
+                  [disabled]="customerForm.invalid">save</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</mat-card>
+

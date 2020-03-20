@@ -1,0 +1,39 @@
+
+
+<div>
+  <div class="card">
+    <div class="card-body">
+      <div>
+        <table class="table table-bordered table-responsive" style="display: inline;margin-left: 5px; row-gap: 20px;"
+               *ngFor="let item of listOfItems">
+          <tr>
+            <td>
+              <img src="../../../assets/images/item.jpg" width="50px" height="200px" class="card-img-top" alt="...">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>{{item.itemName}}</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Price: ${{item.price}}
+            </td>
+          </tr>
+          <tr>
+            <td width="10px">
+              <p>Item description goes here......</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button mat-stroked-button color="primary" (click)="addToCart(item)">Add to Cart</button>
+              | <button mat-stroked-button color="warn">Buy</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

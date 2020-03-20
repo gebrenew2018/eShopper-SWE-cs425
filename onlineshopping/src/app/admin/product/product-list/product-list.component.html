@@ -1,0 +1,40 @@
+<div class="container" style="padding-top: 30px;" align="center">
+  <mat-card style="width: 80%;">
+    <mat-card-header class="custom-mat-card-header" fxLayout="row">
+      <div fxFlex="100" style="align-content: center;">
+        <mat-card-title>
+          <mat-icon>view_list</mat-icon>Item List &nbsp;&nbsp;&nbsp;&nbsp;<button (click)="displayItemForm()" mat-stroked-button color="primary">Add</button></mat-card-title>
+        <div style="text-align: right"></div>
+      </div>
+<!--      -->
+    </mat-card-header>
+    <div class="panel-body">
+      <table  class="table table-hover table-sm" >
+                <thead class="thead-light">
+                <tr>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Collection</th>
+                  <th>price</th>
+                  <th>Action</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of listOfItems ">
+                  <td>{{item.itemName}}</td>
+                  <td>{{item.category}}</td>
+                  <td>{{item.collectionType}}</td>
+                  <td>{{item.price}}</td>
+                  <td>
+            <button (click)="deleteItem(item.itemId)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>
+<!--            <button (click)="updateItem(item.itemId)" class='btn btn-info'-->
+<!--                    data-toggle="modal" data-target="#myModal">Update</button>-->
+          </td>
+        </tr>
+        </tbody>
+        <br>
+      </table>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,75 @@
+<div class="container" style="padding-top: 30px;" align="center">
+  <mat-card style="width: 60%;">
+    <form [formGroup]="signupForm" #savecustomer (ngSubmit)="onSubmit(savecustomer)" style="padding-left: 20px;">
+      <fieldset>
+        <legend>SignUp</legend>
+        <small><span>Fille all required fields marked (*)</span></small>
+        <div class="container" style="margin-top: 1em; text-align: left">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label>* First Name</label>
+                <input id="itemName" formControlName="firstName" type="text" class="form-control" placeholder="Enter First name"
+                       required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="middleName"> Middle Name</label>
+                <input id="middleName" formControlName="middleName" type="text" class="form-control" placeholder="Enter Middle name" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="lastName"> Last Name</label>
+                <input id="lastName" formControlName="lastName" type="text" class="form-control" placeholder="Enter Last name" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="phoneNumber"> Phone Number</label>
+                <input id="phoneNumber" formControlName="phoneNumber" type="text" class="form-control" placeholder="Enter Phone Number" required>
+              </div>
+            </div>
+          </div>
+<!--          <div class="row">-->
+<!--            <div class="col-md-8">-->
+<!--              <div class="form-group">-->
+<!--                <label for="emailAddress"> E-Mail Address</label>-->
+<!--                <input id="emailAddress" formControlName="emailAddress" type="text" class="form-control" placeholder="Enter Email Address" required>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-8">-->
+<!--              <div class="form-group">-->
+<!--                <label for="password"> Password</label>-->
+<!--                <input id="password" formControlName="password" type="text" class="form-control" placeholder="Enter Password" required>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-8">-->
+<!--              <div class="form-group">-->
+<!--                <label for="cpassword"> Confirm Password</label>-->
+<!--                <input id="cpassword" formControlName="cpassword" type="text" class="form-control" placeholder="Enter Password Confirmation" required>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="row">
+            <div class="form-group">
+              <button  type="submit" mat-stroked-button color="primary">Register</button> &nbsp;&nbsp;&nbsp;
+              <button (click)="displayLogin()" type="button" mat-stroked-button color="warn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </mat-card>
+</div>

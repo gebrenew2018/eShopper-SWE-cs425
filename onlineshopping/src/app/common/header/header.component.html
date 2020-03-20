@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 40px;">
+  <a class="navbar-brand" href="#" >eShopper<img src="../../../assets/images/eshopper.gif" width="50px" height="50px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/product">All<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/mens">Mens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/womens">Womens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/boys">Boys</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/girls">Girls</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/brands">Brands</a>
+      </li>
+      <li class="nav-item">
+          <input matInput type="text" class="form-control"  style="width: 260px;" placeholder="Search items">
+      </li>&nbsp;
+      <li class="nav-item">
+          <button  type="button" class="btn btn-outline-primary">Search</button>
+      </li>
+      <li class="nav-item" style="padding-left: 50px">
+        <a class="nav-link" routerLink="/login"><i class="material-icons">account_circle</i>SignIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/order"><i class="material-icons">attach_money</i>Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cart"><i class="material-icons">shopping_cart</i>Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cart">WelCome: {{loginUser}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
